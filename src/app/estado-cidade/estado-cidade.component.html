@@ -1,0 +1,20 @@
+<div class="formulario">
+  <div>
+    <mat-form-field class="example-full-width">
+      <mat-select [(ngModel)]="selectedEstado.id" (ngModelChange)="onSelectEstado($event)" id="sel-est"
+                  placeholder="Estado" name="estado" required>
+        <mat-option *ngFor="let estado of estados" value={{estado.id}}>{{estado.nome}}</mat-option>
+      </mat-select>
+      <mat-error>Estado é obrigatório</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field  class="example-full-width">
+      <mat-select [(ngModel)]="selectedCidade.id" (ngModelChange)="onSelectCidade($event)" id="sel-cid"
+                  placeholder="Cidade" name="cidade" required>
+        <mat-option *ngFor="let cidade of cidades " value={{cidade.id}}>{{cidade.nome}}</mat-option>
+      </mat-select>
+      <mat-error>Cidade é obrigatória</mat-error>
+    </mat-form-field>
+  </div>
+</div>
